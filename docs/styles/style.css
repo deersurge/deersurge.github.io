@@ -22,6 +22,8 @@
     border-radius: 100px; }
 body {
   font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: white; }
   body .app.cointainer-fluid {
     padding: 0px;
@@ -40,6 +42,12 @@ body {
     padding: 0px 0px; }
   body button.btn {
     cursor: pointer; }
+    body button.btn.btn-primary {
+      background-color: #2B62ED;
+      transition: 0s all; }
+      body button.btn.btn-primary:hover {
+        background-color: #1249d3;
+        transition: 0s all; }
   body p.hint {
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
@@ -51,3 +59,5 @@ body {
     margin-top: 35vh; }
   body .form-control:disabled, body .form-control[readonly] {
     background-color: #f8f9fa; }
+  body .form-group label {
+    font-weight: 600; }

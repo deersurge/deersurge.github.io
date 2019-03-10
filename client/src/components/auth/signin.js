@@ -28,18 +28,18 @@ class Signin extends Component {
                         <div className="card-body">
                         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                             <div className="form-group">
-                                <label>Email:</label>
+                                <label>Email</label>
                                 <Field
                                     type= 'email'
                                     name="email"
                                     component="input"
                                     className="form-control form-control-lg"
-                                    placeholder="email@email.com"
+                                    placeholder="sample@email.com"
                                     required
                                     />
                             </div>
                             <div className="form-group">
-                                <label>Password:</label>
+                                <label>Password</label>
                                 <Field
                                     type= 'password'
                                     name="password"
@@ -51,7 +51,7 @@ class Signin extends Component {
                             </div>
                             {this.renderAlert()}
                             <div style={{'paddingTop': '30px'}}>
-                                <button type="submit" className="btn btn-lg btn-primary btn-block">Sign in</button>
+                                <button type="submit" className="btn btn-lg btn-primary btn-block">Sign in to Deersurge</button>
                             </div>
                         </form>
                         </div>

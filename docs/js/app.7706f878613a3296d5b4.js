@@ -20852,14 +20852,14 @@ class Signin extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Email:'
+                                'Email'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 type: 'email',
                                 name: 'email',
                                 component: 'input',
                                 className: 'form-control form-control-lg',
-                                placeholder: 'email@email.com',
+                                placeholder: 'sample@email.com',
                                 required: true
                             })
                         ),
@@ -20869,7 +20869,7 @@ class Signin extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Password:'
+                                'Password'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 type: 'password',
@@ -20887,7 +20887,7 @@ class Signin extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'button',
                                 { type: 'submit', className: 'btn btn-lg btn-primary btn-block' },
-                                'Sign in'
+                                'Sign in to Deersurge'
                             )
                         )
                     )
@@ -20974,7 +20974,7 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'First name*:'
+                                'First name*'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 name: 'firstName',
@@ -20990,7 +20990,7 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Last name*:'
+                                'Last name*'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 name: 'lastName',
@@ -21006,7 +21006,7 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Email*:'
+                                'Email*'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 name: 'email',
@@ -21022,7 +21022,7 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Password*:'
+                                'Password*'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 type: 'password',
@@ -21039,7 +21039,7 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'label',
                                 null,
-                                'Comfirm Password*:'
+                                'Comfirm Password*'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_redux_form__["a" /* Field */], {
                                 type: 'password',

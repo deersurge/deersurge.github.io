@@ -1,7 +1,11 @@
+@import 'variable.scss';
+
 body {
     font-family: sans-serif;
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: white;
+
     .app.cointainer-fluid {
       padding: 0px;
       margin: 0px;
@@ -27,6 +31,14 @@ body {
     }
     button.btn{
         cursor: pointer;
+        &.btn-primary {
+            background-color: $primary-color;
+            transition: 0s all;
+            &:hover{
+                background-color: darken($primary-color, 10);
+                transition: 0s all;
+            }
+        }
     }
     p.hint{
         font-family: 'Work Sans', sans-serif;
@@ -40,6 +52,11 @@ body {
     }
     .form-control:disabled, .form-control[readonly]{
         background-color: #f8f9fa;
+    }
+    .form-group {
+        label {
+            font-weight: 600;
+        }
     }
 }
 
