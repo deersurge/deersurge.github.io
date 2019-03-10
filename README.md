@@ -1,6 +1,6 @@
 # deersurge landing page
 
-beta: https://deersurge.github.io
+beta: https://deersurge.github.io/intro/
 
 
 ## Client-side usage(PORT: 3000)
