@@ -3373,31 +3373,32 @@ if (localStorage.getItem('deersurge_jwt_token')) {
 }
 __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-function signUserIn(data) {
+function signUserIn(data, router) {
     return function (dispatch) {
         // Submit email/password to server
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(`/signin`, data).then(res => {
             dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["b" /* AUTH_USER */] });
             localStorage.setItem('deersurge_jwt_token', res.data.token);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
+            router.fn(router.dist);
         }).catch(error => {
             console.log(error);
-            dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["a" /* AUTH_ERROR */], payload: 'Server Error, try later.' });
+            dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["a" /* AUTH_ERROR */], payload: 'Wrong password, try again.' });
         });
     };
 }
 
-function signUserUp(userObj) {
-    console.log(userObj);
+function signUserUp(userObj, router) {
     return function (dispatch) {
         // Submit email/password to server
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(`/signup`, userObj).then(res => {
             dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["b" /* AUTH_USER */] });
             localStorage.setItem('deersurge_jwt_token', res.data.token);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
+            router.fn(router.dist);
         }).catch(error => {
             console.log(error);
-            dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["a" /* AUTH_ERROR */], payload: 'Server Error, try later.' });
+            dispatch({ type: __WEBPACK_IMPORTED_MODULE_1__types__["a" /* AUTH_ERROR */], payload: 'Signup is not available now, try next time.' });
         });
     };
 }
@@ -20801,9 +20802,12 @@ var createValues = function createValues(_ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_form__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_actions__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__centerCard363__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__card_scss__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__card_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__card_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__centerCard363__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__card_scss__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__card_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__card_scss__);
+
 
 
 
@@ -20828,13 +20832,17 @@ class Signin extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         }
     }
     handleFormSubmit(d) {
-        this.props.signUserIn(d);
+        const r = {
+            fn: this.context.router.history.push,
+            dist: '/'
+        };
+        this.props.signUserIn(d, r);
     }
     render() {
         // console.log('this.props;: ', this.props);
         const { handleSubmit } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_4__centerCard363__["a" /* default */],
+            __WEBPACK_IMPORTED_MODULE_5__centerCard363__["a" /* default */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -20896,6 +20904,10 @@ class Signin extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }
 }
 
+Signin.contextTypes = {
+    router: __WEBPACK_IMPORTED_MODULE_4_prop_types___default.a.object
+};
+
 function mapStateToProps({ auth }) {
     return {
         errorMsg: auth.error
@@ -20948,7 +20960,11 @@ class Signup extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }
     handleFormSubmit(data) {
         if (data.password == data.password2) {
-            this.props.signUserUp(data);
+            const r = {
+                fn: this.context.router.history.push,
+                dist: '/'
+            };
+            this.props.signUserUp(data, r);
         } else {
             this.renderAlert('password does not matched');
         }

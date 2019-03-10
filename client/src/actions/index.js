@@ -16,7 +16,7 @@ if (localStorage.getItem('deersurge_jwt_token')) {
 }
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-export function signUserIn(data) {
+export function signUserIn(data, router) {
     return function (dispatch) {
         // Submit email/password to server
         axios
@@ -25,16 +25,16 @@ export function signUserIn(data) {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('deersurge_jwt_token', res.data.token);
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
+                router.fn(router.dist);
             })
             .catch(error => {
                 console.log(error);
-                dispatch({type: AUTH_ERROR, payload: 'Server Error, try later.'})
+                dispatch({type: AUTH_ERROR, payload: 'Wrong password, try again.'})
             });
     }
 }
 
-export function signUserUp(userObj) {
-    console.log(userObj);
+export function signUserUp(userObj, router) {
     return function (dispatch) {
         // Submit email/password to server
         axios
@@ -43,10 +43,11 @@ export function signUserUp(userObj) {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('deersurge_jwt_token', res.data.token);
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
+                router.fn(router.dist);
             })
             .catch(error => {
                 console.log(error);
-                dispatch({type: AUTH_ERROR, payload: 'Server Error, try later.'})
+                dispatch({type: AUTH_ERROR, payload: 'Signup is not available now, try next time.'})
             });
     }
 }

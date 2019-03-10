@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import {reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
 import {signUserIn} from 'actions';
-import CenterCard363 from '../centerCard363';
+import PropTypes from 'prop-types';
 
+import CenterCard363 from '../centerCard363';
 import './card.scss';
 
 class Signin extends Component {
@@ -17,7 +18,11 @@ class Signin extends Component {
         }
     }
     handleFormSubmit(d) {
-        this.props.signUserIn(d)
+        const r = {
+            fn: this.context.router.history.push,
+            dist: '/'
+        };
+        this.props.signUserIn(d, r)
     }
     render() {
         // console.log('this.props;: ', this.props);
@@ -59,6 +64,10 @@ class Signin extends Component {
                 </CenterCard363>
         );
     }
+}
+
+Signin.contextTypes = {
+    router: PropTypes.object
 }
 
 function mapStateToProps({auth}) {

@@ -18,7 +18,11 @@ class Signup extends Component {
     }
     handleFormSubmit(data) {
         if (data.password == data.password2) {
-            this.props.signUserUp(data);
+            const r = {
+                fn: this.context.router.history.push,
+                dist: '/'
+            };
+            this.props.signUserUp(data, r);
         }else{
             this.renderAlert('password does not matched');
         }
