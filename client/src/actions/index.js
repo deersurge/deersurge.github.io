@@ -24,7 +24,6 @@ export function signUserIn(data) {
             .then(res => {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('deersurge_jwt_token', res.data.token);
-                window.location = '/#account';
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
             })
             .catch(error => {
@@ -43,7 +42,6 @@ export function signUserUp(userObj) {
             .then(res => {
                 dispatch({type: AUTH_USER})
                 localStorage.setItem('deersurge_jwt_token', res.data.token);
-                window.location = '/#account';
                 axios.defaults.headers.common['Authorization'] = localStorage.getItem('deersurge_jwt_token');
             })
             .catch(error => {
