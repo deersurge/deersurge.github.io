@@ -8,8 +8,8 @@ class Signout extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>Hope to see you soon!</h1>
+            <div className='container-fluid'>
+                <p className='hint'>Hope to see you soon!</p>
             </div>
         );
     }

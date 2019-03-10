@@ -3,7 +3,8 @@ body {
 
     background-color: white;
     .app.cointainer-fluid {
-      padding-top: 30px;
+      padding: 0px;
+      margin: 0px;
     }
     nav {
         .navbar-toggler {
@@ -26,6 +27,19 @@ body {
     }
     button.btn{
         cursor: pointer;
+    }
+    p.hint{
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        opacity: 0.3;
+        text-align: center;
+        margin: auto;
+        margin-top: 35vh;
+    }
+    .form-control:disabled, .form-control[readonly]{
+        background-color: #f8f9fa;
     }
 }
 

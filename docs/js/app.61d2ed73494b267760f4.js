@@ -10577,15 +10577,15 @@ function isPromise(obj) {
 
 
 const CenterCard363 = props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  "div",
-  { className: "row" },
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-xs-12 col-sm-2 col-md-3" }),
+  'div',
+  { className: 'row', styles: { 'marginTop': '20px' } },
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'col-xs-12 col-sm-2 col-md-3' }),
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "div",
-    { className: "col-sm-8 col-md-6" },
+    'div',
+    { className: 'col-sm-8 col-md-6' },
     props.children
   ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-xs-12 col-sm-2 col-md-3" })
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'col-xs-12 col-sm-2 col-md-3' })
 );
 
 /* harmony default export */ __webpack_exports__["a"] = (CenterCard363);
@@ -12300,13 +12300,9 @@ function mapStateToProps({ auth }) {
 class Public extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'div',
-      { className: 'container-fluid' },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h1',
-        null,
-        'Comming soon...'
-      )
+      'p',
+      { className: 'hint' },
+      'Comming soon...'
     );
   }
 }
@@ -12328,8 +12324,8 @@ class Public extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       'div',
       { className: 'container-fluid' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h1',
-        null,
+        'p',
+        { className: 'hint' },
         'How it works'
       )
     );
@@ -12353,8 +12349,8 @@ class Public extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       'div',
       { className: 'container-fluid' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h1',
-        null,
+        'p',
+        { className: 'hint' },
         'For Enterprise'
       )
     );
@@ -12434,12 +12430,12 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         { className: 'form-group' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { disabled: !dirty, type: 'submit', className: 'btn-lg btn btn-light btn-block' },
+          { disabled: !dirty, type: 'submit', className: 'btn-lg btn btn-primary btn-block' },
           'Save Change'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'button',
-          { disabled: submitting, className: 'btn-lg btn btn-secondary btn-block', onClick: this.cancelForm.bind(this) },
+          { disabled: submitting, className: 'btn-lg btn btn-light btn-block', onClick: this.cancelForm.bind(this) },
           'Cancel'
         )
       );
@@ -12547,7 +12543,7 @@ class Account extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           { to: '/signout' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'button',
-            { className: 'btn btn-none btn-lg btn-block' },
+            { className: 'btn btn-danger btn-lg btn-block' },
             'Log out'
           )
         )
@@ -21109,10 +21105,10 @@ class Signout extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            null,
+            { className: 'container-fluid' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h1',
-                null,
+                'p',
+                { className: 'hint' },
                 'Hope to see you soon!'
             )
         );

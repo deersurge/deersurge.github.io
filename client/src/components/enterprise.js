@@ -4,7 +4,7 @@ export default class Public extends Component {
   render() {
     return (
       <div className='container-fluid'>
-        <h1>For Enterprise</h1>
+        <p className='hint'>For Enterprise</p>
       </div>
     );
   }

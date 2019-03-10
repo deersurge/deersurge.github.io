@@ -43,8 +43,8 @@ class Account extends Component {
     const {submitting, dirty} = this.props;
     if(this.state.editting){
       return (<div className="form-group">
-        <button disabled={!dirty} type="submit" className="btn-lg btn btn-light btn-block">Save Change</button>
-        <button disabled={submitting} className="btn-lg btn btn-secondary btn-block" onClick={this.cancelForm.bind(this)}>Cancel</button>
+        <button disabled={!dirty} type="submit" className="btn-lg btn btn-primary btn-block">Save Change</button>
+        <button disabled={submitting} className="btn-lg btn btn-light btn-block" onClick={this.cancelForm.bind(this)}>Cancel</button>
       </div>)
     }else{
       return (<button className="btn btn-light btn-lg btn-block" onClick={this.switchEditting.bind(this)}>Update Information</button>)
@@ -112,7 +112,7 @@ class Account extends Component {
         {this.renderButtons()}
       </div>
       <div style={{'paddingTop': '20px'}}>
-        <Link to='/signout'><button className="btn btn-none btn-lg btn-block">Log out</button></Link>
+        <Link to='/signout'><button className="btn btn-danger btn-lg btn-block">Log out</button></Link>
       </div>
     </form>);
   }

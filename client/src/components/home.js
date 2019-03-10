@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 export default class Public extends Component {
   render() {
     return (
-      <div className='container-fluid'>
-        <h1>Comming soon...</h1>
-      </div>
+        <p className='hint'>Comming soon...</p>
     );
   }
 }

@@ -18,11 +18,14 @@
   background-color: white; }
   .card input, .card button, .card div.alert {
     border-radius: 0px; }
+  .card button.btn {
+    border-radius: 100px; }
 body {
   font-family: sans-serif;
   background-color: white; }
   body .app.cointainer-fluid {
-    padding-top: 30px; }
+    padding: 0px;
+    margin: 0px; }
   body nav .navbar-toggler {
     outline: none;
     border: none;
@@ -37,3 +40,14 @@ body {
     padding: 0px 0px; }
   body button.btn {
     cursor: pointer; }
+  body p.hint {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.3;
+    text-align: center;
+    margin: auto;
+    margin-top: 35vh; }
+  body .form-control:disabled, body .form-control[readonly] {
+    background-color: #f8f9fa; }
