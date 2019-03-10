@@ -7,7 +7,8 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/app';
 import Home from './components/home';
-import Public from './components/public';
+import How from './components/how';
+import Enterprise from './components/enterprise';
 import Account from './components/account';
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
@@ -32,7 +33,8 @@ ReactDOM.render(
       <App>
         <Switch>
           <Route exact path="/" component= {Home} />
-          <Route path="/public" component= {Public} />
+          <Route path="/how" component= {How} />
+          <Route path="/enterprise" component= {Enterprise} />
           <Route path="/account" component= {RequireAuth(Account)} />
           <Route path="/signin" component= {Signin} />
           <Route path="/signup" component= {Signup} />

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
-import {signUserIn} from '../../actions';
+import {signUserIn} from 'actions';
 import CenterCard363 from '../centerCard363';
 class Signin extends Component {
     renderAlert(){

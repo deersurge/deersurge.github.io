@@ -47,5 +47,11 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'styles/style.css'
         }),
-    ]
+    ],
+    resolve: {
+        modules: [
+          path.resolve('./src'),
+          path.resolve('./node_modules'),
+        ]
+    },
 }

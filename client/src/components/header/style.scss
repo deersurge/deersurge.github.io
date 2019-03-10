@@ -1,0 +1,22 @@
+.navbar.navbar-light.navbar-light.bg-light {
+    background-color: white !important;
+
+    .navbar-brand {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-left: 10px;
+        margin-right: 50px;
+    }
+    
+    .nav-item {
+        .nav-link {
+            color: black;
+            padding-left: 15px;
+            padding-right: 15px;
+            &:hover {
+                color: #265DF1
+            }
+        }
+    }
+}

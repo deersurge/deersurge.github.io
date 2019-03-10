@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {reduxForm, Field} from 'redux-form';
-import {tryConnect, getUserProfile, updateUserProfile} from '../actions';
+import {tryConnect, getUserProfile, updateUserProfile} from 'actions';
 import CenterCard363 from './centerCard363';
+import { Link } from 'react-router-dom';
 
 class Account extends Component {
   constructor(){
@@ -112,6 +113,7 @@ class Account extends Component {
       </div>}
       <div style={{'paddingTop': '30px'}}>
         {this.renderButtons()}
+        <button className="btn btn-light btn-lg btn-block"><Link to='/signout'>Log out</Link></button>
       </div>
     </form>);
   }

@@ -1,5 +1,7 @@
 body {
-    background-color: white;
+    font-family: sans-serif;
+
+    background-color: #f8f8f8 !important;
     .cointainer {
       padding: 10px;
       padding-top: 30px;
@@ -7,7 +9,8 @@ body {
     nav {
         .navbar-toggler {
             outline: none;
-            border: none;   
+            border: none;
+            cursor: pointer;
         }
     }
     .row{
