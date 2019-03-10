@@ -3389,6 +3389,7 @@ function signUserIn(data) {
 }
 
 function signUserUp(userObj) {
+    console.log(userObj);
     return function (dispatch) {
         // Submit email/password to server
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(`/signup`, userObj).then(res => {

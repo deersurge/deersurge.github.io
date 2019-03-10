@@ -35,6 +35,7 @@ export function signUserIn(data) {
 }
 
 export function signUserUp(userObj) {
+    console.log(userObj);
     return function (dispatch) {
         // Submit email/password to server
         axios

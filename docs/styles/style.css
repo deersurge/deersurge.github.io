@@ -1,4 +1,4 @@
-.navbar.navbar-light.navbar-light.bg-light {
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);.navbar.navbar-light.navbar-light.bg-light {
   background-color: white !important; }
   .navbar.navbar-light.navbar-light.bg-light .navbar-brand {
     font-family: 'Work Sans', sans-serif;
