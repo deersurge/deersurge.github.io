@@ -28,13 +28,10 @@ class Signup extends Component {
         return (
             <CenterCard363>
                 <div className='card'>
-                <h4 className="card-header">
-                    Sign Up
-                </h4>
                     <div className="card-body">
                 <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                     <div className="form-group">
-                        <label>First name:</label>
+                        <label>First name*:</label>
                         <Field
                             name="firstName"
                             type='text'
@@ -44,7 +41,7 @@ class Signup extends Component {
                             required/>
                     </div>
                     <div className="form-group">
-                        <label>Last name:</label>
+                        <label>Last name*:</label>
                         <Field
                             name="lastName"
                             type='text'
@@ -54,7 +51,7 @@ class Signup extends Component {
                             required/>
                     </div>
                     <div className="form-group">
-                        <label>Email:</label>
+                        <label>Email*:</label>
                         <Field
                             name="email"
                             type='email'
@@ -64,7 +61,7 @@ class Signup extends Component {
                             required/>
                     </div>
                     <div className="form-group">
-                        <label>Password:</label>
+                        <label>Password*:</label>
                         <Field
                             type='password'
                             name="password"
@@ -76,7 +73,7 @@ class Signup extends Component {
                     </div>
                     
                     <div className="form-group">
-                        <label>Comfirm Password:</label>
+                        <label>Comfirm Password*:</label>
                         <Field
                             type='password'
                             name="password2"
@@ -87,7 +84,7 @@ class Signup extends Component {
                     </div>
                     {this.renderAlert()}
                     <div style={{'paddingTop': '30px'}}>
-                        <button type="submit" className="btn btn-lg btn-light btn-block">Sign Up</button>
+                        <button type="submit" className="btn btn-lg btn-primary btn-block">Sign Up</button>
                     </div>
                 </form>
                 </div>

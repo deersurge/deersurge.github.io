@@ -6,7 +6,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <div className='cointainer'>
+        <div className='app cointainer-fluid'>
             {this.props.children}
         </div>
       </div>

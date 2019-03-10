@@ -3,6 +3,9 @@ import {reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
 import {signUserIn} from 'actions';
 import CenterCard363 from '../centerCard363';
+
+import './card.scss';
+
 class Signin extends Component {
     renderAlert(){
         if(this.props.errorMsg) {
@@ -22,9 +25,6 @@ class Signin extends Component {
         return (
                 <CenterCard363>
                     <div className='card'>
-                    <h4 className="card-header">
-                        Sign In
-                    </h4>
                         <div className="card-body">
                         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                             <div className="form-group">
@@ -51,7 +51,7 @@ class Signin extends Component {
                             </div>
                             {this.renderAlert()}
                             <div style={{'paddingTop': '30px'}}>
-                                <button type="submit" className="btn btn-lg btn-light btn-block">Sign in</button>
+                                <button type="submit" className="btn btn-lg btn-primary btn-block">Sign in</button>
                             </div>
                         </form>
                         </div>

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "start": "serve ../docs",
-    "build": "rm -rf ../docs && webpack --config webpack.prod.js"
+    "build": "rm -rf ../docs && webpack --config webpack.prod.js && npm run copy:404",
+    "copy:404": "cp ./src/404.html ../docs/404.html"
   },
   "author": "amazingandyyy",
   "license": "MIT",

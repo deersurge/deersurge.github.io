@@ -1,9 +1,8 @@
 body {
     font-family: sans-serif;
 
-    background-color: #f8f8f8 !important;
-    .cointainer {
-      padding: 10px;
+    background-color: white;
+    .app.cointainer-fluid {
       padding-top: 30px;
     }
     nav {
@@ -11,6 +10,12 @@ body {
             outline: none;
             border: none;
             cursor: pointer;
+        }
+    }
+    a {
+        outline: none;
+        &:hover{
+            text-decoration: none;
         }
     }
     .row{

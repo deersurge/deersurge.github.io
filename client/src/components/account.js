@@ -21,9 +21,6 @@ class Account extends Component {
     return (
       <CenterCard363>
         <div className='card border-secondary'>
-        <h4 className="card-header">
-          Account
-        </h4>
         <div className='card-body'>
         <p className="text-muted">Server status: {status} ☀</p>
           {profile && this.renderProfileForm()}
@@ -113,7 +110,9 @@ class Account extends Component {
       </div>}
       <div style={{'paddingTop': '30px'}}>
         {this.renderButtons()}
-        <button className="btn btn-light btn-lg btn-block"><Link to='/signout'>Log out</Link></button>
+      </div>
+      <div style={{'paddingTop': '20px'}}>
+        <Link to='/signout'><button className="btn btn-none btn-lg btn-block">Log out</button></Link>
       </div>
     </form>);
   }
